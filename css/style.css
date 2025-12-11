@@ -22,7 +22,7 @@ nav ul {
   padding: 0;
   display: flex;
   gap: 1rem;
-  justify-content: center; /* opcional: centra los enlaces en nav */
+  justify-content: center;
 }
 
 nav a {
@@ -38,4 +38,15 @@ nav a:hover {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace;
+}
+code {
+  color: #d73a49; /* opcional */
 }
