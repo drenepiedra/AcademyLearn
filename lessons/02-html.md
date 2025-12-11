@@ -54,6 +54,7 @@ Todo documento HTML debe tener esta estructura básica:
 
 - `<!DOCTYPE html>`: Declara que es un documento HTML5
 - `<html>`: Elemento raíz del documento
+- `<meta>`: Metadatos que proporcionan información sobre la página, no visible para el usuario
 - `<head>`: Contiene metadatos (información sobre la página)
 - `<body>`: Contiene el contenido visible
 

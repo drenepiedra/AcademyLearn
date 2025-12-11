@@ -1,9 +1,9 @@
 # Bienvenido al Curso
 
-Este curso te enseñará:
+Como inicio este curso te enseñará:
 
 - Fundamentos de HTML
 - Fundamentos de CSS
 - Fundamentos de JavaScript
 
-¡Comencemos!
+¡Hgámoslo!
