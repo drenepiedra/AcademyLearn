@@ -1,88 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Mi Curso de Programación Web</title>
 
-    <!-- Estilo general -->
-    <link
-      rel="stylesheet"
-      href="css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi Curso de Programación Web</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/vs2015.min.css"
-    />
-   
-    <link
-      rel="shortcut icon"
-      href="assets/images/asterisk-svgrepo-com.svg"
-      type="image/x-icon" />
+  <!-- Estilo general -->
+  <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Marked.js para convertir Markdown a HTML -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Primeros pasos para convertirte en Desarrollador</h1>
-      <div
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 5px;
-        ">
-        <span style="margin-right: 5px">
-          Sería de mucha ayuda tu apoyo en GitHub
-        </span>
-        <a
-          href="https://github.com/drenepiedra/AcademyLearn"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img
-            alt="GitHub stars"
-            src="https://img.shields.io/github/stars/drenepiedra/AcademyLearn?style=social"
-            style="vertical-align: middle" />
-        </a>
-      </div>
-    </header>
+  <!-- Estilo de highlight.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/vs2015.min.css">
 
-    <nav>
-      <ul>
-        <li><a href="#01-intro.md">Introducción</a></li>
-        <li><a href="#02-html.md">HTML Básico</a></li>
-        <li><a href="#03-css.md">CSS Básico</a></li>
-        <li><a href="#04-js.md">JavaScript Básico</a></li>
-        <li><a href="#05-SQL.md">SQL Básico</a></li>
-      </ul>
-    </nav>
+  <link rel="shortcut icon" href="assets/images/asterisk-svgrepo-com.svg" type="image/x-icon" />
 
-    <section id="content">
-      <!-- Aquí aparecerán las lecciones -->
-    </section>
+  <!-- Marked.js para convertir Markdown a HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Highlight.js desde CDN -->
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+  <!-- Idiomas adicionales para highlight.js -->
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/html.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/bash.min.js"></script>
+</head>
 
+<body>
+  <header>
+    <h1>Primeros pasos para convertirte en Desarrollador</h1>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+      <span style="margin-right: 5px">
+        Sería de mucha ayuda tu apoyo en GitHub
+      </span>
+      <a href="https://github.com/drenepiedra/AcademyLearn" target="_blank" rel="noopener noreferrer">
+        <img alt="GitHub stars" src="https://img.shields.io/github/stars/drenepiedra/AcademyLearn?style=social"
+          style="vertical-align: middle" />
+      </a>
+    </div>
+  </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/highlight.min.js"></script>
+  <nav>
+    <ul>
+      <li><a href="#01-intro.md">Introducción</a></li>
+      <li><a href="#02-html.md">HTML Básico</a></li>
+      <li><a href="#03-css.md">CSS Básico</a></li>
+      <li><a href="#04-js.md">JavaScript Básico</a></li>
+      <li><a href="#05-SQL.md">SQL Básico</a></li>
+    </ul>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/languages/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/languages/html.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/languages/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/languages/bash.min.js"></script>
+  <section id="content">
+    <!-- Aquí aparecerán las lecciones -->
+  </section>
 
-    <!-- TU SCRIPT AL FINAL -->
-    <script src="scripts/render.js"></script>
+  <script src="scripts/render.js"></script>
+</body>
 
-          <script>
-      document.addEventListener("click", (e) => {
-        if (!e.target.classList.contains("copy-btn")) return;
-
-        const code = e.target.nextElementSibling.innerText;
-        navigator.clipboard.writeText(code);
-
-        e.target.innerText = "Copiado";
-        setTimeout(() => (e.target.innerText = "Copiar"), 1500);
-      });
-      </script>
-
-  </body>
 </html>

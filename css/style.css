@@ -40,15 +40,3 @@ nav a:hover {
   padding: 0 1rem;
 }
 
-pre {
-  background: #1e1e1e;
-  padding: 1rem;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-size: 0.9rem;
-}
-
-pre code {
-  font-family: 'Fira Code', monospace;
-  line-height: 1.6;
-}
