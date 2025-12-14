@@ -5,6 +5,8 @@ async function loadMarkdown(file) {
   try {
     const response = await fetch(`lessons/${file}`);
     if (!response.ok) throw new Error('Error al cargar el archivo');
+
+    console.log(response);
     
     const text = await response.text();
     contentEl.innerHTML = marked.parse(text); // convierte MD a HTML
