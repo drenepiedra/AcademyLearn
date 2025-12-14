@@ -2,16 +2,16 @@
 
 ## Contenidos
 
-1. [Introducción a HTML](#introducción-a-html)
-2. [Estructura Básica](#estructura-básica)
-3. [Elementos de Texto](#elementos-de-texto)
-4. [Listas](#listas)
-5. [Enlaces e Imágenes](#enlaces-e-imágenes)
-6. [Tablas](#tablas)
-7. [Formularios](#formularios)
-8. [Elementos Semánticos](#elementos-semánticos)
-9. [Multimedia](#multimedia)
-10. [Metadatos y SEO](#metadatos-y-seo)
+1. [Introducción a HTML](##introducción-a-html)
+2. [Estructura Básica](##estructura-básica)
+3. [Elementos de Texto](##elementos-de-texto)
+4. [Listas](##listas)
+5. [Enlaces e Imágenes](##enlaces-e-imágenes)
+6. [Tablas](##tablas)
+7. [Formularios](##formularios)
+8. [Elementos Semánticos](##elementos-semánticos)
+9. [Multimedia](##multimedia)
+10. [Metadatos y SEO](##metadatos-y-seo)
 
 ---
 
