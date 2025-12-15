@@ -4,15 +4,26 @@ function addAnchorsToHeadings(container) {
   const headings = container.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
   headings.forEach((heading) => {
-    if (!heading.id) return;
+    //Generar ID si no existe
+    if (!heading.id) {
+      const id = heading.textContent
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/--+/g, "-");
+
+      heading.id = id; // Asignar el ID al elemento
+    }
 
     // Evitar duplicados
     if (heading.querySelector(".heading-anchor")) return;
 
+    // Crear y añadir el anchor
     const anchor = document.createElement("a");
     anchor.className = "heading-anchor";
     anchor.href = `#${heading.id}`;
-    anchor.setAttribute("aria-label", "Enlace permanente");
+    anchor.setAttribute("aria-label", "Enlace permanente a esta sección");
     anchor.textContent = "#";
 
     heading.prepend(anchor);
