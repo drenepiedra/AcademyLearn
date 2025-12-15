@@ -2,24 +2,24 @@
 
 ## Tabla de Contenidos
 
-1. [Introducción a CSS](#introducción-a-css)
-2. [Formas de Aplicar CSS](#formas-de-aplicar-css)
-3. [Selectores](#selectores)
-4. [Colores](#colores)
-5. [Tipografía y Texto](#tipografía-y-texto)
-6. [Box Model](#box-model)
-7. [Display y Posicionamiento](#display-y-posicionamiento)
-8. [Flexbox](#flexbox)
-9. [Grid](#grid)
-10. [Fondos y Bordes](#fondos-y-bordes)
-11. [Sombras y Efectos](#sombras-y-efectos)
-12. [Transformaciones](#transformaciones)
-13. [Transiciones](#transiciones)
-14. [Animaciones](#animaciones)
-15. [Responsive Design](#responsive-design)
-16. [Pseudo-clases y Pseudo-elementos](#pseudo-clases-y-pseudo-elementos)
-17. [Variables CSS](#variables-css)
-18. [Filtros y Blend Modes](#filtros-y-blend-modes)
+1. Introducción a CSS
+2. Formas de Aplicar CSS
+3. Selectores
+4. Colores
+5. Tipografía y Texto
+6. Box Model
+7. Display y Posicionamiento
+8. Flexbox
+9. Grid
+10. Fondos y Bordes
+11. Sombras y Efectos
+12. Transformaciones
+13. Transiciones
+14. Animaciones
+15. [Responsive Design
+16. Pseudo-clases y Pseudo-elementos
+17. [Variables CSS
+18. Filtros y Blend Modes
 
 ---
 

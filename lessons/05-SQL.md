@@ -2,31 +2,31 @@
 
 ## Tabla de Contenidos
 
-1. [Introducción a SQL](#introducción-a-sql)
-2. [Tipos de Datos](#tipos-de-datos)
-3. [Crear y Eliminar Bases de Datos](#crear-y-eliminar-bases-de-datos)
-4. [Crear, Modificar y Eliminar Tablas](#crear-modificar-y-eliminar-tablas)
-5. [INSERT - Insertar Datos](#insert---insertar-datos)
-6. [SELECT - Consultar Datos](#select---consultar-datos)
-7. [WHERE - Filtrar Datos](#where---filtrar-datos)
-8. [UPDATE - Actualizar Datos](#update---actualizar-datos)
-9. [DELETE - Eliminar Datos](#delete---eliminar-datos)
-10. [ORDER BY - Ordenar Resultados](#order-by---ordenar-resultados)
-11. [Funciones de Agregación](#funciones-de-agregación)
-12. [GROUP BY y HAVING](#group-by-y-having)
-13. [JOIN - Unir Tablas](#join---unir-tablas)
-14. [Subconsultas](#subconsultas)
-15. [UNION y Operadores de Conjunto](#union-y-operadores-de-conjunto)
-16. [Constraints (Restricciones)](#constraints-restricciones)
-17. [Índices](#índices)
-18. [Vistas](#vistas)
-19. [Procedimientos Almacenados](#procedimientos-almacenados)
-20. [Triggers (Disparadores)](#triggers-disparadores)
-21. [Transacciones](#transacciones)
-22. [Funciones de Texto](#funciones-de-texto)
-23. [Funciones de Fecha](#funciones-de-fecha)
-24. [Funciones Matemáticas](#funciones-matemáticas)
-25. [CASE y Lógica Condicional](#case-y-lógica-condicional)
+1. Introducción a SQL
+2. Tipos de Datos
+3. Crear y Eliminar Bases de Datos
+4. Crear, Modificar y Eliminar Tablas
+5. INSERT - Insertar Datos
+6. SELECT - Consultar Datos
+7. WHERE - Filtrar Datos
+8. UPDATE - Actualizar Datos
+9. DELETE - Eliminar Datos
+10. ORDER BY - Ordenar Resultados
+11. Funciones de Agregación
+12. GROUP BY y HAVING
+13. JOIN - Unir Tablas
+14. Subconsultas
+15. UNION y Operadores de Conjunto
+16. Constraints (Restricciones)
+17. Índices
+18. Vistas
+19. Procedimientos Almacenados
+20. Triggers (Disparadores)
+21. Transacciones
+22. Funciones de Texto
+23. Funciones de Fecha
+24. Funciones Matemáticas
+25. CASE y Lógica Condicional
 
 ---
 
