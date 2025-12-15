@@ -40,3 +40,23 @@ nav a:hover {
   padding: 0 1rem;
 }
 
+.heading-anchor {
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: #9ca3af;
+  opacity: 0;
+  font-weight: normal;
+}
+
+h1:hover .heading-anchor,
+h2:hover .heading-anchor,
+h3:hover .heading-anchor,
+h4:hover .heading-anchor,
+h5:hover .heading-anchor,
+h6:hover .heading-anchor {
+  opacity: 1;
+}
+
+.heading-anchor:hover {
+  color: #2563eb;
+}
