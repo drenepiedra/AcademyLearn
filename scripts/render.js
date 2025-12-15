@@ -3,19 +3,18 @@ const contentEl = document.getElementById("content");
 // Cargar un archivo Markdown y renderizarlo
 async function loadMarkdown(file) {
   try {
-    const response = await fetch(`lessons/${file}`);
-    if (!response.ok) throw new Error('Error al cargar el archivo');
+    const response = await fetch(`./lessons/${file}`);
+    if (!response.ok) throw new Error("Error al cargar el archivo");
 
     console.log(response);
-    
+
     const text = await response.text();
     contentEl.innerHTML = marked.parse(text); // convierte MD a HTML
-    
+
     // Aplicar resaltado de sintaxis después de cargar el contenido
-    document.querySelectorAll('pre code').forEach((block) => {
+    document.querySelectorAll("pre code").forEach((block) => {
       hljs.highlightElement(block);
     });
-    
   } catch (error) {
     console.error("Error al cargar la lección:", error);
     contentEl.innerHTML = `
@@ -36,6 +35,6 @@ function handleHash() {
 window.addEventListener("hashchange", handleHash);
 
 // Inicializar al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   handleHash();
 });
