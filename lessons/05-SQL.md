@@ -1,31 +1,32 @@
 # Guía Completa de SQL con Ejemplos
 
 ## Tabla de Contenidos
-1. [Introducción a SQL](##introducción-a-sql)
-2. [Tipos de Datos](##tipos-de-datos)
-3. [Crear y Eliminar Bases de Datos](##crear-y-eliminar-bases-de-datos)
-4. [Crear, Modificar y Eliminar Tablas](##crear-modificar-y-eliminar-tablas)
-5. [INSERT - Insertar Datos](##insert---insertar-datos)
-6. [SELECT - Consultar Datos](##select---consultar-datos)
-7. [WHERE - Filtrar Datos](##where---filtrar-datos)
-8. [UPDATE - Actualizar Datos](##update---actualizar-datos)
-9. [DELETE - Eliminar Datos](##delete---eliminar-datos)
-10. [ORDER BY - Ordenar Resultados](##order-by---ordenar-resultados)
-11. [Funciones de Agregación](##funciones-de-agregación)
-12. [GROUP BY y HAVING](##group-by-y-having)
-13. [JOIN - Unir Tablas](##join---unir-tablas)
-14. [Subconsultas](##subconsultas)
-15. [UNION y Operadores de Conjunto](##union-y-operadores-de-conjunto)
-16. [Constraints (Restricciones)](##constraints-restricciones)
-17. [Índices](##índices)
-18. [Vistas](##vistas)
-19. [Procedimientos Almacenados](##procedimientos-almacenados)
-20. [Triggers (Disparadores)](##triggers-disparadores)
-21. [Transacciones](##transacciones)
-22. [Funciones de Texto](##funciones-de-texto)
-23. [Funciones de Fecha](##funciones-de-fecha)
-24. [Funciones Matemáticas](##funciones-matemáticas)
-25. [CASE y Lógica Condicional](##case-y-lógica-condicional)
+
+1. Introducción a SQL
+2. Tipos de Datos
+3. Crear y Eliminar Bases de Datos
+4. Crear, Modificar y Eliminar Tablas
+5. INSERT - Insertar Datos
+6. SELECT - Consultar Datos
+7. WHERE - Filtrar Datos
+8. UPDATE - Actualizar Datos
+9. DELETE - Eliminar Datos
+10. ORDER BY - Ordenar Resultados
+11. Funciones de Agregación
+12. GROUP BY y HAVING
+13. JOIN - Unir Tablas
+14. Subconsultas
+15. UNION y Operadores de Conjunto
+16. Constraints (Restricciones)
+17. Índices
+18. Vistas
+19. Procedimientos Almacenados
+20. Triggers (Disparadores)
+21. Transacciones
+22. Funciones de Texto
+23. Funciones de Fecha
+24. Funciones Matemáticas
+25. CASE y Lógica Condicional
 
 ---
 
@@ -36,15 +37,19 @@ SQL (Structured Query Language) es el lenguaje estándar para gestionar y manipu
 ### Categorías de SQL
 
 **DDL (Data Definition Language)** - Definición de datos
+
 - CREATE, ALTER, DROP, TRUNCATE
 
 **DML (Data Manipulation Language)** - Manipulación de datos
+
 - SELECT, INSERT, UPDATE, DELETE
 
 **DCL (Data Control Language)** - Control de datos
+
 - GRANT, REVOKE
 
 **TCL (Transaction Control Language)** - Control de transacciones
+
 - COMMIT, ROLLBACK, SAVEPOINT
 
 ### Comentarios en SQL
@@ -52,7 +57,7 @@ SQL (Structured Query Language) es el lenguaje estándar para gestionar y manipu
 ```sql
 -- Este es un comentario de una línea
 
-/* 
+/*
    Este es un comentario
    de múltiples líneas
 */
@@ -408,7 +413,7 @@ VALUES (1, 'Ana García', 'ana@email.com', 25);
 
 -- Insertar múltiples registros
 INSERT INTO clientes (nombre, email, edad)
-VALUES 
+VALUES
     ('Pedro López', 'pedro@email.com', 35),
     ('María Rodríguez', 'maria@email.com', 28),
     ('Carlos Sánchez', 'carlos@email.com', 42);
@@ -436,8 +441,8 @@ SELECT nombre, email FROM clientes;
 
 -- Copiar con condición
 INSERT INTO clientes_premium (nombre, email, edad)
-SELECT nombre, email, edad 
-FROM clientes 
+SELECT nombre, email, edad
+FROM clientes
 WHERE edad >= 18;
 ```
 
@@ -447,7 +452,7 @@ WHERE edad >= 18;
 -- MySQL: actualizar si existe, insertar si no existe
 INSERT INTO productos (id, nombre, precio, stock)
 VALUES (1, 'Laptop', 899.99, 10)
-ON DUPLICATE KEY UPDATE 
+ON DUPLICATE KEY UPDATE
     precio = VALUES(precio),
     stock = stock + VALUES(stock);
 
@@ -470,7 +475,7 @@ SELECT * FROM clientes;
 SELECT nombre, email FROM clientes;
 
 -- Seleccionar con alias
-SELECT 
+SELECT
     nombre AS nombre_cliente,
     email AS correo_electronico,
     edad AS años
@@ -484,7 +489,7 @@ FROM clientes;
 SELECT DISTINCT ciudad FROM clientes;
 
 -- Seleccionar con cálculos
-SELECT 
+SELECT
     nombre,
     precio,
     precio * 0.9 AS precio_con_descuento,
@@ -522,7 +527,7 @@ SELECT CONCAT_WS(' | ', nombre, email, ciudad) AS datos
 FROM clientes;
 
 -- Operaciones matemáticas
-SELECT 
+SELECT
     nombre,
     precio,
     stock,
@@ -530,10 +535,10 @@ SELECT
 FROM productos;
 
 -- Condiciones en SELECT
-SELECT 
+SELECT
     nombre,
     precio,
-    CASE 
+    CASE
         WHEN precio < 100 THEN 'Económico'
         WHEN precio < 500 THEN 'Medio'
         ELSE 'Premium'
@@ -566,15 +571,15 @@ SELECT * FROM productos WHERE precio <= 50;
 
 ```sql
 -- AND: ambas condiciones deben cumplirse
-SELECT * FROM clientes 
+SELECT * FROM clientes
 WHERE edad >= 18 AND edad <= 65;
 
 -- OR: al menos una condición debe cumplirse
-SELECT * FROM clientes 
+SELECT * FROM clientes
 WHERE ciudad = 'Madrid' OR ciudad = 'Barcelona';
 
 -- NOT: invierte la condición
-SELECT * FROM clientes 
+SELECT * FROM clientes
 WHERE NOT ciudad = 'Madrid';
 
 -- Combinación de operadores
@@ -613,8 +618,8 @@ WHERE ciudad IN ('Madrid', 'Barcelona', 'Valencia');
 
 -- Equivalente a:
 SELECT * FROM clientes
-WHERE ciudad = 'Madrid' 
-   OR ciudad = 'Barcelona' 
+WHERE ciudad = 'Madrid'
+   OR ciudad = 'Barcelona'
    OR ciudad = 'Valencia';
 
 -- NOT IN
@@ -727,7 +732,7 @@ WHERE id = 1;
 
 -- Actualizar múltiples campos
 UPDATE clientes
-SET 
+SET
     email = 'nuevo@email.com',
     telefono = '123456789',
     ciudad = 'Madrid'
@@ -993,7 +998,7 @@ ORDER BY fecha_registro DESC;
 -- Productos ordenados por disponibilidad y luego por precio
 SELECT nombre, stock, precio
 FROM productos
-ORDER BY 
+ORDER BY
     CASE WHEN stock > 0 THEN 0 ELSE 1 END,
     precio ASC;
 ```
@@ -1018,8 +1023,8 @@ SELECT COUNT(DISTINCT ciudad) FROM clientes;
 SELECT COUNT(*) AS total_clientes FROM clientes;
 
 -- Con condición
-SELECT COUNT(*) AS mayores_edad 
-FROM clientes 
+SELECT COUNT(*) AS mayores_edad
+FROM clientes
 WHERE edad >= 18;
 ```
 
@@ -1068,14 +1073,14 @@ SELECT MAX(precio) FROM productos;
 SELECT MIN(precio) FROM productos;
 
 -- Múltiples agregaciones
-SELECT 
+SELECT
     MAX(precio) AS precio_maximo,
     MIN(precio) AS precio_minimo,
     AVG(precio) AS precio_promedio
 FROM productos;
 
 -- Con fechas
-SELECT 
+SELECT
     MIN(fecha_pedido) AS primer_pedido,
     MAX(fecha_pedido) AS ultimo_pedido
 FROM pedidos;
@@ -1085,7 +1090,7 @@ FROM pedidos;
 
 ```sql
 -- Estadísticas completas de productos
-SELECT 
+SELECT
     COUNT(*) AS total_productos,
     COUNT(DISTINCT categoria) AS total_categorias,
     SUM(stock) AS stock_total,
@@ -1096,7 +1101,7 @@ SELECT
 FROM productos;
 
 -- Estadísticas por condición
-SELECT 
+SELECT
     COUNT(*) AS total_clientes,
     COUNT(CASE WHEN activo = TRUE THEN 1 END) AS clientes_activos,
     COUNT(CASE WHEN activo = FALSE THEN 1 END) AS clientes_inactivos,
@@ -1136,7 +1141,7 @@ GROUP BY ciudad, pais;
 
 ```sql
 -- Ventas totales por producto
-SELECT 
+SELECT
     producto_id,
     COUNT(*) AS total_ventas,
     SUM(cantidad) AS unidades_vendidas,
@@ -1145,4 +1150,5 @@ FROM ventas
 GROUP BY producto_id;
 
 -- Estadísticas por categoría
-SELECT 
+SELECT
+```
