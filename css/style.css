@@ -1,28 +1,16 @@
 /* Cascadia Code PL - versión normal */
 @font-face {
   font-family: "Cascadia Code PL";
-  src: url("/fonts/CascadiaCodePL/CascadiaCodePL.woff2") format("woff2"),
-    url("/fonts/CascadiaCodePL/CascadiaCodePL.woff") format("woff"),
-    url("/fonts/CascadiaCodePL/CascadiaCodePL.ttf") format("truetype");
+  src: url("/fonts/CascadiaCodePL/CascadiaCode.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-}
-
-/* Cascadia Code PL - versión itálica (opcional) */
-@font-face {
-  font-family: "Cascadia Code PL";
-  src: url("/fonts/CascadiaCodePL/CascadiaCodePL-Italic.woff2") format("woff2"),
-    url("/fonts/CascadiaCodePL/CascadiaCodePL-Italic.woff") format("woff"),
-    url("/fonts/CascadiaCodePL/CascadiaCodePL-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: #fafafa;
-  font-family: "Cascadia Code PL", monospace;
+  font-family: "Cascadia Code", monospace;
 }
 
 header {
