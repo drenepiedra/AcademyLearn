@@ -1,7 +1,28 @@
+/* Cascadia Code PL - versión normal */
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("/fonts/CascadiaCodePL/CascadiaCodePL.woff2") format("woff2"),
+    url("/fonts/CascadiaCodePL/CascadiaCodePL.woff") format("woff"),
+    url("/fonts/CascadiaCodePL/CascadiaCodePL.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Cascadia Code PL - versión itálica (opcional) */
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("/fonts/CascadiaCodePL/CascadiaCodePL-Italic.woff2") format("woff2"),
+    url("/fonts/CascadiaCodePL/CascadiaCodePL-Italic.woff") format("woff"),
+    url("/fonts/CascadiaCodePL/CascadiaCodePL-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 body {
-  font-family: Lato, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #fafafa;
+  font-family: "Cascadia Code PL", monospace;
 }
 
 header {
@@ -40,3 +61,23 @@ nav a:hover {
   padding: 0 1rem;
 }
 
+.heading-anchor {
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: #9ca3af;
+  opacity: 0;
+  font-weight: normal;
+}
+
+h1:hover .heading-anchor,
+h2:hover .heading-anchor,
+h3:hover .heading-anchor,
+h4:hover .heading-anchor,
+h5:hover .heading-anchor,
+h6:hover .heading-anchor {
+  opacity: 1;
+}
+
+.heading-anchor:hover {
+  color: #2563eb;
+}
